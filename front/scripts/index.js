@@ -1,4 +1,5 @@
 const tempData = require('./tempData')
+const axios = require('axios')
 
 
 
@@ -104,20 +105,13 @@ return slider.forEach(element => {
 
 const url = 'https://students-api.up.railway.app/movies';
 
-$.ajax({
-  url: url,
-  method: 'GET',
-  dataType: 'json',
-  success: function(response) {
-    const arr = response
-    createCards(arr)
-  },
-  error: function(xhr, status, error) {
-      // Manejar errores
-  }
-});
+async function peticion (){
+const {data} = await axios.get(url)
+createCards(data)
+console.log(data)
+}
 
-
+peticion()
 
 createSliders(tempData)
 
