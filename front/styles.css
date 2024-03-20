@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+.content-nav{
+    background: #000;
+}
+
+.content-nav .nav-information{
+    display: flex;
+    width: 850px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 15px 20px;
+    align-items: center;
+}
+
+.content-nav .nav-information 
+.information-logo .logo{
+ width: 83px;
+ margin-right: 20px;
+}
+
+
+.content-nav .nav-information 
+.information-buttons .button{
+ background: none;
+ border: none;
+ color: #fff;
+ margin-right: 10px;
+}
+
+
+.content-nav .nav-information 
+.information-buttons .button:hover  .buttons-links{
+ background: #fff;
+ color: #000;
+ padding: 5px 10px;
+}
+
+
+.content-nav .nav-information 
+.information-buttons .button .buttons-links{
+ text-decoration: none;
+ color: #fff;
+ cursor: pointer;
+ font-weight: 700;
+ font-size: 16px;
+ transition: all ease .1s;
+}
+
+
+
+
+
+
+
+
+
+/* /////////////SLIDE////////////// */
+
+
+.container-slider{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.content-slider{
+   width: 1200px; 
+   height: 500px;
+   display: flex !important;
+   justify-content: center;
+   align-items: center;
+}
+
+.cards-slider{
+   
+    background-repeat: no-repeat;
+   background-size: 100% 100%; 
+
+}
+
+
+
+.card-slider{
+    display: flex !important;
+    flex-direction: row-reverse;
+    width: 1200px;
+    height: 500px !important;
+    color: white;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    align-items: center;
+    padding: 30px 20px ;
+    background-repeat: no-repeat;
+   background-size: 100% 100%; 
+
+}
+
+
+.img-slider{
+    width: 350px;
+    height: 300px;
+}
+
+.title-slider{
+    font-size: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ///////////// CONTENT MOVIES ////////////// */
+
+.content-movies{
+    width: 100%;
+    background: black; 
+    display: flex;
+    overflow: scroll;
+    padding: 80px 20px;
+ }
+
+
+
+ .cards-movies{
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 20px;
+    cursor: pointer;
+    color: #fff;
+    overflow: hidden;
+    transition: all ease-in-out .1s;
+    margin-bottom: 20px;
+ }
+
+
+ .cards-movies:hover{
+    height: 400px;
+ }
+
+
+ .img-movie{
+    width: 200px;
+    height: 300px;
+    object-fit: contain;
+    margin-bottom: 10px;
+ }
+
+
+ .title-movie{
+    font-size: 16px;
+    font-weight: 700;
+ }
+
+ .duration-movie{
+    font-size: 12px;
+ }
+
+ .rate-movie{
+    font-size: 12px;
+ }
+
+ 
+ 
