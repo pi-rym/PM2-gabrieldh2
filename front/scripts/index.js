@@ -106,7 +106,7 @@ return slider.forEach(element => {
 
 } 
 
-const url = 'http://localhost:3500/movies';
+const url = 'http://localhost:3000/movies';
 
 async function peticion (){
 const {data} = await axios.get(url)
