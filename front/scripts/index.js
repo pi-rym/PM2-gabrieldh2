@@ -1,5 +1,6 @@
-const tempData = require('./tempData')
+const {limpiarFormulario, manejarEnvioFormulario} = require('./form')
 const axios = require('axios')
+const tempData = require('./tempData')
 
 
 
@@ -48,6 +49,8 @@ return arr.forEach(element => {
 });
 
 } 
+
+
 
 let createSliders = function(data){ 
   
@@ -103,22 +106,40 @@ return slider.forEach(element => {
 
 } 
 
-const url = 'https://students-api.up.railway.app/movies';
+const url = 'http://localhost:3500/movies';
 
 async function peticion (){
 const {data} = await axios.get(url)
-createCards(data)
-console.log(data)
+await createCards(data)
+
 }
+
 
 peticion()
 
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  
+
+
+
+  const clearButton = document.getElementById('clearButton')
+  clearButton.addEventListener('click',limpiarFormulario)
+  
+  
+  
+  const form = document.getElementById('formularioPelicula')
+  form.addEventListener('submit', manejarEnvioFormulario)
+
+
+
+
+});
+
+
+
 createSliders(tempData)
-
-
-
-
-
 
 
 

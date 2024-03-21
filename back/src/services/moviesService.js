@@ -1,6 +1,7 @@
-const axios = require('axios')
+const axios = require('axios');
+const Movies = require('../models/Movies');
 
-class Movies{
+class Movie{
     constructor(title,year,director,duration,genre,rate,poster){
         if (!title || typeof title !== 'string' || title.trim() === '') {
             throw new Error('El título de la película es obligatorio y debe ser una cadena no vacía.');
@@ -30,8 +31,8 @@ class Movies{
 const peliculas = async ()=>{
     try{
         const url = 'https://students-api.up.railway.app/movies';
-    const { data } = await axios.get(url);
-    const cartelPeliculas = data.map(element => new Movies(element.title, element.year, element.director, element.duration, element.genre, element.rate, element.poster));
+    const  data  = await Movies.find();
+    const cartelPeliculas = data.map(element => new Movie(element.title, element.year, element.director, element.duration, element.genre, element.rate, element.poster));
     console.log(cartelPeliculas);
     return cartelPeliculas;
     }catch(error){
